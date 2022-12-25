@@ -140,50 +140,50 @@ int main( void )
 	
     /* Create Tasks here */
 	xTaskPeriodicCreate(Button_1_Monitor,
-											(const char *) "B1",
-											configMINIMAL_STACK_SIZE,
-											NULL,
-											1,
-											&B1_Handler,
-											B1_PERIOD );
+					   (const char *) "B1",
+					   configMINIMAL_STACK_SIZE,
+					   NULL,
+					   1,
+					   &B1_Handler,
+					   B1_PERIOD );
 											
 	xTaskPeriodicCreate(Button_2_Monitor,
-											(const char *) "B2",
-											configMINIMAL_STACK_SIZE,
-											NULL,
-											1,
-											&B2_Handler,
-											B2_PERIOD );
+					   (const char *) "B2",
+					   configMINIMAL_STACK_SIZE,
+					   NULL,
+					   1,
+					   &B2_Handler,
+					   B2_PERIOD );
 											
 	xTaskPeriodicCreate(Periodic_Transmitter,
-											(const char *) "Tx",
-											configMINIMAL_STACK_SIZE,
-											NULL,
-											1,
-											&Tx_Handler,
-											TX_PERIOD );
+						(const char *) "Tx",
+						configMINIMAL_STACK_SIZE,
+						NULL,
+						1,
+						&Tx_Handler,
+						TX_PERIOD );
 											
 	xTaskPeriodicCreate(Uart_Receiver,
-											(const char *) "Rx",
-											configMINIMAL_STACK_SIZE,
-											NULL,
-											1,
-											&Rx_Handler,
-											RX_PERIOD );
+					   (const char *) "Rx",
+					   configMINIMAL_STACK_SIZE,
+					   NULL,
+					   1,
+					   &Rx_Handler,
+					   RX_PERIOD );
 	xTaskPeriodicCreate(Load_1_Simulation,
-											(const char *) "L1",
-											configMINIMAL_STACK_SIZE,
-											NULL,
-											1,
-											&L1_Handler,
-											L1_PERIOD );
+					   (const char *) "L1",
+					   configMINIMAL_STACK_SIZE,
+					   NULL,
+					   1,
+					   &L1_Handler,
+					   L1_PERIOD );
 	xTaskPeriodicCreate(Load_2_Simulation,
-											(const char *) "L2",
-											configMINIMAL_STACK_SIZE,
-											NULL,
-											1,
-											&L2_Handler,
-											L2_PERIOD );
+					   (const char *) "L2",
+					   configMINIMAL_STACK_SIZE,
+					   NULL,
+					   1,
+					   &L2_Handler,
+					   L2_PERIOD );
 
 
 	/* Now all the tasks have been started - start the scheduler.
